@@ -23,7 +23,7 @@ FROM ubuntu:bionic
 # install the team-xbmc ppa
 RUN apt-get update                                                        && \
     apt-get install -y --no-install-recommends software-properties-common && \
-    add-apt-repository ppa:team-xbmc/ppa                                  && \
+    add-apt-repository ppa:team-xbmc/unstable                             && \
     apt-get -y purge ca-certificates openssl software-properties-common   && \
     apt-get -y --purge autoremove                                         && \
     rm -rf /var/lib/apt/lists/*
